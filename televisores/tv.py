@@ -10,15 +10,6 @@ class TV:
         self._canal = 1
         self._volumen = 1
         self._precio = 500
-        self.getEstado()
-        self.canalDown()
-        self.canalUp()
-        self.turnOff()
-        self.turnOn()
-        self.volumenDown()
-        self.volumenUp()
-
-
 
     #Retorna el total de los tv
     def getNumTV(self):
@@ -36,23 +27,23 @@ class TV:
 
     #cambiar canales
     def canalUp(self):
-        if self.getEstado():
+        if TV.getEstado():
             if (self._canal >=1 and self._canal <120):
                 self._canal+=1
 
     def canalDown(self):
-        if self.getEstado():
+        if TV.getEstado():
             if (self._canal >1 and self._canal <=120):
                 self._canal-=1
     
 
     def volumenUp(self):
-        if self.getEstado():
+        if TV.getEstado():
             if (self._volumen >=0 and self._volumen <7):
                 self._volumen+=1
 
     def volumenDown(self):
-        if self.getEstado():
+        if TV.getEstado():
             if (self._volumen >0 and self._volumen <=7):
                 self._volumen-=1
     
@@ -61,7 +52,7 @@ class TV:
         return self._canal
     
     def setCanal(self, canal):
-        if self.getEstado():
+        if TV.getEstado():
             if (self._canal >=1 and self._canal <=120):
                 self._canal=canal
 
@@ -75,7 +66,7 @@ class TV:
         return self._volumen
 
     def setVolumen(self, volumen):
-        if self.getEstado:
+        if TV.getEstado:
             if volumen >= 0 and volumen <=7:
                 self._volumen = volumen
 
