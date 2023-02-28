@@ -27,23 +27,23 @@ class TV:
 
     #cambiar canales
     def canalUp(self):
-        if TV.getEstado():
+        if TV.getEstado(self):
             if (self._canal >=1 and self._canal <120):
                 self._canal+=1
 
     def canalDown(self):
-        if TV.getEstado():
+        if TV.getEstado(self):
             if (self._canal >1 and self._canal <=120):
                 self._canal-=1
     
 
     def volumenUp(self):
-        if TV.getEstado():
+        if TV.getEstado(self):
             if (self._volumen >=0 and self._volumen <7):
                 self._volumen+=1
 
     def volumenDown(self):
-        if TV.getEstado():
+        if TV.getEstado(self):
             if (self._volumen >0 and self._volumen <=7):
                 self._volumen-=1
     
@@ -52,7 +52,7 @@ class TV:
         return self._canal
     
     def setCanal(self, canal):
-        if TV.getEstado():
+        if TV.getEstado(self):
             if (self._canal >=1 and self._canal <=120):
                 self._canal=canal
 
@@ -66,7 +66,7 @@ class TV:
         return self._volumen
 
     def setVolumen(self, volumen):
-        if TV.getEstado:
+        if TV.getEstado(self):
             if volumen >= 0 and volumen <=7:
                 self._volumen = volumen
 
