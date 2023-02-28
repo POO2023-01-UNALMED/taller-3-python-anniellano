@@ -17,8 +17,6 @@ class TV:
         self.turnOn()
         self.volumenDown()
         self.volumenUp()
-        self.getVolumen()
-        self.setVolumen()
 
 
 
