@@ -7,18 +7,20 @@ class TV:
         self._marca = marca
         self._estado = estado
         TV._numTV +=1
+        self._canal = 1
+        self._volumen = 1
+        self._precio = 500
+        self.getEstado()
+        self.canalDown()
+        self.canalUp()
+        self.turnOff()
+        self.turnOn()
+        self.volumenDown()
+        self.volumenUp()
+        self.getVolumen()
+        self.setVolumen()
 
-    def __init__(self):
-            self._canal = 1
-            self._volumen = 1
-            self._precio = 500
-            self.getEstado()
-            self.canalDown()
-            self.canalUp()
-            self.turnOff()
-            self.turnOn()
-            self.volumenDown()
-            self.volumenUp()
+
 
     #Retorna el total de los tv
     def getNumTV(self):
@@ -70,6 +72,14 @@ class TV:
     
     def setPrecio(self, precio):
         self._precio = precio
+
+    def getVolumen(self):
+        return self._volumen
+
+    def setVolumen(self, volumen):
+        if self.getEstado:
+            if volumen >= 0 and volumen <=7:
+                self._volumen = volumen
 
     def getControl(self):
         return self._control
