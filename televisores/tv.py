@@ -76,3 +76,12 @@ class TV:
     
     def setControl(self, control):
         self._control = control
+
+    def getMarca(self):
+        return self._marca
+    
+    def setMarca(self, marca):
+        self._marca = marca
+
+    def setNumTV(self,n):
+        TV._numTV = n
