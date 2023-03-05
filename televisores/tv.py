@@ -18,9 +18,9 @@ class TV:
     
     #cambiar estado
     def turnOn(self):
-        self._numTV = True
+        self._estado = True
     def turnOff(self):
-        self._numTV = False
+        self._estado = False
 
     def getEstado(self):
         return self._estado
